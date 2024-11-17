@@ -23,13 +23,20 @@
   "dependencies": {
     "@grpc/grpc-js": "^1.12.2",
     "@grpc/proto-loader": "^0.7.13",
+    "@liaoliaots/nestjs-redis": "^10.0.0",
     "@nestjs/common": "^10.4.7",
+    "@nestjs/config": "^3.3.0",
     "@nestjs/core": "^10.4.7",
+    "@nestjs/microservices": "^10.4.7",
     "@nestjs/platform-express": "^10.4.7",
     "@nestjs/platform-socket.io": "^10.4.7",
     "@nestjs/websockets": "^10.4.7",
+    "@socket.io/redis-adapter": "^8.3.0",
+    "ioredis": "^5.4.1",
+    "redis": "^4.7.0",
     "reflect-metadata": "^0.2.2",
-    "rxjs": "^7.8.1"
+    "rxjs": "^7.8.1",
+    "socket.io": "^4.8.1"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.4.7",
@@ -75,7 +82,8 @@
       "<rootDir>/libs/"
     ],
     "moduleNameMapper": {
-      "^@app/database(|/.*)$": "<rootDir>/libs/database/src/$1"
+      "^@app/database(|/.*)$": "<rootDir>/libs/database/src/$1",
+      "^@app/redis(|/.*)$": "<rootDir>/libs/redis/src/$1"
     }
   }
 }
