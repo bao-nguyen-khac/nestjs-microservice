@@ -8,15 +8,15 @@ import { CustomRedisModule } from '@app/redis';
         CustomRedisModule.register([
             {
                 namespace: 'client1',
-                host: '172.16.240.253',
+                host: 'localhost',
                 port: 6379,
-                password: 'Redis6789',
+                password: '789',
             },
             {
                 namespace: 'client2',
-                host: '172.16.246.210',
+                host: 'localhost',
                 port: 6379,
-                password: 'NhacLich6379',
+                password: '123',
             },
         ]),
     ],

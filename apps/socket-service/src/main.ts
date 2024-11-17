@@ -8,6 +8,8 @@ async function bootstrap() {
     // await redisIoAdapter.connectToRedis();
 
     // app.useWebSocketAdapter(redisIoAdapter);
+
+    app.enableShutdownHooks();
     await app.listen(3001, '0.0.0.0');
     console.log(`Application is running on: ${await app.getUrl()}`);
 }
